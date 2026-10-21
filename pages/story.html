@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F2E8D8">
+
+  <title>Our Story — Coficito.</title>
+  <meta name="description" content="Discover the little moments, thoughtful details and everyday rituals behind the Coficito brand concept.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/story.css">
+
+  <script src="../js/translations.js" defer></script>
+  <script src="../js/story-i18n.js" defer></script>
+  <script src="../js/story.js" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="../index.html" class="wordmark" aria-label="Coficito home">
+        coficito<span>.</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="../index.html" data-i18n="nav.home">Home</a>
+        <a href="shop.html" data-i18n="nav.shop">Shop</a>
+        <a href="food.html" data-i18n="nav.food">Food &amp; Brunch</a>
+        <a href="recipes.html" data-i18n="nav.recipes">Recipes</a>
+        <a href="visit.html" data-i18n="nav.visit">Visit Us</a>
+        <a href="story.html" aria-current="page" data-i18n="nav.story">Our Story</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+
+        <div class="language-switcher" role="group" aria-label="Select language">
+          <button type="button" class="language-option" data-lang="es" aria-pressed="false">ES</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" class="language-option is-active" data-lang="en" aria-pressed="true">EN</button>
+        </div>
+
+        <a href="shop.html" class="story-shop-link">
+          <span data-i18n="nav.shop">Shop</span> ↗
+        </a>
+
+        <button
+          type="button"
+          class="story-menu-toggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="story-mobile-nav">
+          ☰
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <nav
+    class="story-mobile-nav"
+    id="story-mobile-nav"
+    aria-label="Mobile navigation"
+    hidden>
+    <a href="../index.html" data-i18n="nav.home">Home</a>
+    <a href="shop.html" data-i18n="nav.shop">Shop</a>
+    <a href="food.html" data-i18n="nav.food">Food &amp; Brunch</a>
+    <a href="recipes.html" data-i18n="nav.recipes">Recipes</a>
+    <a href="visit.html" data-i18n="nav.visit">Visit Us</a>
+    <a href="story.html" aria-current="page" data-i18n="nav.story">Our Story</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="story-hero" aria-labelledby="story-hero-title">
+      <div class="story-hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=2200&q=85"
+          alt="Warm coffee ritual in soft natural light"
+          fetchpriority="high">
+      </div>
+
+      <div class="story-hero-shade"></div>
+
+      <div class="story-hero-content">
+        <span class="story-eyebrow" data-story="hero-eyebrow">
+          THE STORY OF COFICITO
+        </span>
+
+        <h1 id="story-hero-title" data-story="hero-title">
+          Some moments<br>
+          deserve to last<br>
+          <em>a little longer.</em>
+        </h1>
+
+        <p data-story="hero-description">
+          A little story about noticing the beauty
+          in everyday moments.
+        </p>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="story-intro story-reveal">
+      <span class="story-eyebrow" data-story="intro-eyebrow">
+        OUR LITTLE PHILOSOPHY
+      </span>
+
+      <div class="story-intro-layout">
+        <h2 data-story="intro-title">
+          It was never<br>
+          just about <em>coffee.</em>
+        </h2>
+
+        <div class="story-intro-copy">
+          <p data-story="intro-p1">
+            It is about the moments around it.
+          </p>
+
+          <p data-story="intro-p2">
+            The warmth between your hands.
+            The quiet before the day begins.
+            The conversations you wish would last.
+          </p>
+
+          <p data-story="intro-p3">
+            Coficito is a celebration of the little things.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 01 -->
+    <section class="story-chapter story-reveal" id="beginning">
+      <div class="story-chapter-image">
+        <img
+          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=85"
+          alt="Coffee and morning light"
+          loading="lazy">
+      </div>
+
+      <div class="story-chapter-content">
+        <span class="story-eyebrow" data-story="chapter-one-eyebrow">
+          01 / THE BEGINNING
+        </span>
+
+        <h2 data-story="chapter-one-title">
+          Every little thing<br>
+          begins <em>somewhere.</em>
+        </h2>
+
+        <p data-story="chapter-one-description">
+          Before the first sip,
+          a moment of stillness.
+        </p>
+
+        <span class="story-chapter-line"></span>
+
+        <span class="story-chapter-caption" data-story="chapter-one-caption">
+          A MOMENT TO BEGIN
+        </span>
+      </div>
+    </section>
+
+    <!-- CHAPTER 02 -->
+    <section class="story-chapter story-chapter-reverse story-reveal" id="discovery">
+      <div class="story-chapter-image">
+        <img
+          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1400&q=85"
+          alt="Fresh coffee and the beauty of small details"
+          loading="lazy">
+      </div>
+
+      <div class="story-chapter-content">
+        <span class="story-eyebrow" data-story="chapter-two-eyebrow">
+          02 / THE DISCOVERY
+        </span>
+
+        <h2 data-story="chapter-two-title">
+          There's beauty<br>
+          in <em>noticing.</em>
+        </h2>
+
+        <p data-story="chapter-two-description">
+          The warmth. The aroma.
+          The little things.
+        </p>
+
+        <span class="story-chapter-line"></span>
+
+        <span class="story-chapter-caption" data-story="chapter-two-caption">
+          A MOMENT TO NOTICE
+        </span>
+      </div>
+    </section>
+
+    <!-- EDITORIAL QUOTE -->
+    <section class="story-quote story-reveal">
+      <span class="story-eyebrow" data-story="quote-eyebrow">
+        A LITTLE REMINDER
+      </span>
+
+      <blockquote data-story="quote">
+        “The loveliest moments<br>
+        are often the <em>smallest.</em>”
+      </blockquote>
+
+      <span class="story-quote-mark">co.</span>
+    </section>
+
+    <!-- CHAPTER 03 -->
+    <section class="story-chapter story-reveal" id="craft">
+      <div class="story-chapter-image">
+        <img
+          src="https://images.unsplash.com/photo-1517256673644-36ad11246d21?auto=format&fit=crop&w=1400&q=85"
+          alt="Thoughtful preparation of specialty coffee"
+          loading="lazy">
+      </div>
+
+      <div class="story-chapter-content">
+        <span class="story-eyebrow" data-story="chapter-three-eyebrow">
+          03 / THE CRAFT
+        </span>
+
+        <h2 data-story="chapter-three-title">
+          Care is a quiet<br>
+          kind of <em>love.</em>
+        </h2>
+
+        <p data-story="chapter-three-description">
+          Made with intention,
+          enjoyed slowly.
+        </p>
+
+        <span class="story-chapter-line"></span>
+
+        <span class="story-chapter-caption" data-story="chapter-three-caption">
+          A MOMENT TO CREATE
+        </span>
+      </div>
+    </section>
+
+    <!-- CHAPTER 04 -->
+    <section class="story-chapter story-chapter-reverse story-reveal" id="ritual">
+      <div class="story-chapter-image">
+        <img
+          src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=1400&q=85"
+          alt="Cozy café setting for an everyday coffee ritual"
+          loading="lazy">
+      </div>
+
+      <div class="story-chapter-content">
+        <span class="story-eyebrow" data-story="chapter-four-eyebrow">
+          04 / THE RITUAL
+        </span>
+
+        <h2 data-story="chapter-four-title">
+          A little moment,<br>
+          just <em>for you.</em>
+        </h2>
+
+        <p data-story="chapter-four-description">
+          Some moments are meant to be yours.
+        </p>
+
+        <span class="story-chapter-line"></span>
+
+        <span class="story-chapter-caption" data-story="chapter-four-caption">
+          A MOMENT TO ENJOY
+        </span>
+      </div>
+    </section>
+
+    <!-- ENDING -->
+    <section class="story-ending">
+      <span class="story-eyebrow" data-story="ending-eyebrow">
+        THE STORY CONTINUES
+      </span>
+
+      <h2 data-story="ending-title">
+        Your daily<br>
+        <em>little ritual.</em>
+      </h2>
+
+      <p data-story="ending-description">
+        A little coffee. A lot of feeling.
+      </p>
+
+      <div class="story-ending-links">
+        <a href="shop.html" data-story="ending-shop">
+          Explore Our Coffee ↗
+        </a>
+        <a href="visit.html" data-story="ending-visit">
+          Discover Our Space ↗
+        </a>
+      </div>
+
+      <small data-story="ending-disclaimer">
+        Coficito is a fictional brand and café concept
+        developed by BEMA Studios.
+      </small>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="wordmark footer-wordmark">
+          coficito<span>.</span>
+        </a>
+
+        <p data-story="footer-tagline">
+          A little coffee. A lot of feeling.
+        </p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../index.html" data-i18n="nav.home">Home</a>
+        <a href="shop.html" data-i18n="nav.shop">Shop</a>
+        <a href="food.html" data-i18n="nav.food">Food &amp; Brunch</a>
+        <a href="recipes.html" data-i18n="nav.recipes">Recipes</a>
+        <a href="visit.html" data-i18n="nav.visit">Visit Us</a>
+        <a href="story.html" data-i18n="nav.story">Our Story</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span data-story="footer-one">
+        Coficito. · A little coffee. A lot of feeling.
+      </span>
+      <span data-story="footer-two">
+        Fictional concept café · Round Rock, Texas
+      </span>
+      <span data-story="footer-three">
+        A brand concept by BEMA Studios.
+      </span>
+    </div>
+  </footer>
+
+</body>
+</html>

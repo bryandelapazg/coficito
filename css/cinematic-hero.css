@@ -1,0 +1,24 @@
+/* Coficito cinematic hero — load AFTER responsive.css */
+.coficito-cinematic {position:relative; isolation:isolate; overflow:hidden; height:min(800px,calc(100svh - 76px)); min-height:520px; background:#211914; color:#fff;}
+.coficito-cinematic .coficito-video-stage {position:absolute;inset:0;width:100%;height:100%;overflow:hidden;z-index:0;}
+.coficito-video-poster,.coficito-scene {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.coficito-scene {opacity:0;transition:opacity 1s ease;pointer-events:none;}
+.coficito-scene.is-active {opacity:1;}
+.coficito-cinematic .coficito-video-shade {position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(19,12,9,.46),rgba(19,12,9,.45) 50%,rgba(19,12,9,.65));pointer-events:none;}
+.coficito-cinematic .coficito-video-content {position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:30px;max-width:none;width:100%;transform:none;}
+.coficito-cinematic .hero-eyebrow {font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:3px;font-weight:600;color:#fff;}
+.coficito-cinematic .coficito-hero-wordmark {font-family:'Cormorant Garamond',serif;font-size:clamp(100px,18vw,265px);font-weight:400;letter-spacing:-.075em;line-height:1;margin:14px 0;color:#fff;white-space:nowrap;}
+.coficito-hero-wordmark span {color:#d7a779;}
+.coficito-cinematic .coficito-hero-subtitle {font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(23px,3vw,38px);margin:0 0 27px;color:#fff;}
+.coficito-cinematic .coficito-video-button {border:1px solid rgba(255,255,255,.8);border-radius:100px;padding:16px 28px;color:#fff;background:transparent;text-decoration:none;font-size:12px;letter-spacing:1px;}
+.coficito-cinematic .coficito-video-button:hover {background:#f2e8d8;color:#432c24;}
+.coficito-cinematic .coficito-video-bottom {position:absolute;z-index:3;bottom:24px;left:5%;right:5%;width:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:10px;letter-spacing:1.8px;color:#fff;}
+.coficito-video-controls {display:flex;gap:7px;align-items:center;}
+.coficito-scene-dot {width:28px;height:12px;position:relative;border:0;background:transparent;cursor:pointer;padding:0;}
+.coficito-scene-dot::after {content:'';position:absolute;inset:4px 0 5px;background:rgba(255,255,255,.4);}
+.coficito-scene-dot[aria-pressed="true"]::after {background:#fff;}
+.coficito-video-pause {background:none;color:#fff;border:1px solid rgba(255,255,255,.5);border-radius:50%;height:34px;width:34px;cursor:pointer;margin-left:12px;}
+.coficito-scene-dot:focus-visible,.coficito-video-pause:focus-visible,.coficito-video-button:focus-visible {outline:2px solid #d7a779;outline-offset:4px;}
+@media(max-width:700px) {.coficito-cinematic {height:calc(100svh - 65px);min-height:500px;}.coficito-cinematic .coficito-hero-wordmark {font-size:clamp(95px,23vw,180px);}.coficito-cinematic .coficito-video-bottom {font-size:9px;letter-spacing:.5px;}.coficito-cinematic .hero-eyebrow {font-size:10px;letter-spacing:2px;}}
+@media(max-width:420px) {.coficito-cinematic .coficito-video-bottom>span:last-child {display:none;}.coficito-cinematic .coficito-hero-wordmark {font-size:clamp(75px,22vw,120px);}}
+@media(prefers-reduced-motion:reduce) {.coficito-scene {transition:none;}.coficito-cinematic .coficito-video-stage video {display:none!important;}}

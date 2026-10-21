@@ -1,0 +1,587 @@
+
+/* ==========================================
+   COFICITO — FOOD & BRUNCH
+   Page-specific styles
+========================================== */
+
+:root {
+  --food-espresso: #432C24;
+  --food-oat: #F2E8D8;
+  --food-caramel: #D7A779;
+  --food-soft: #E9DDCC;
+}
+
+.food-bag-link {
+  width: 38px;
+  height: 38px;
+  display: inline-grid;
+  place-items: center;
+  color: var(--food-espresso);
+}
+
+.food-bag-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* HERO */
+
+.food-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 620px;
+  min-height: min(85svh, 850px);
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--food-espresso);
+  color: #FFF9F0;
+}
+
+.food-hero-photo,
+.food-hero-shade {
+  position: absolute;
+  inset: 0;
+}
+
+.food-hero-photo {
+  z-index: -2;
+}
+
+.food-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.food-hero-shade {
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(25, 15, 11, .76),
+    rgba(25, 15, 11, .32) 70%
+  );
+}
+
+.food-hero-content {
+  width: 100%;
+  padding: 100px max(5%, 24px) 110px;
+}
+
+.food-hero .eyebrow {
+  color: #FFF9F0;
+}
+
+.food-hero h1 {
+  max-width: 1050px;
+  margin: 24px 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(72px, 9vw, 145px);
+  font-weight: 500;
+  line-height: .85;
+  letter-spacing: -.055em;
+}
+
+.food-hero h1 em {
+  font-weight: 400;
+}
+
+.food-hero-content > p {
+  font-size: 15px;
+  color: #FFF9F0;
+}
+
+/* STICKY CATEGORY NAV */
+
+.food-category-nav {
+  position: sticky;
+  top: 80px;
+  z-index: 30;
+  background: var(--food-oat);
+  border-bottom: 1px solid rgba(67, 44, 36, .16);
+}
+
+.food-category-inner {
+  display: flex;
+  justify-content: center;
+  gap: clamp(20px, 4vw, 60px);
+  padding: 0 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.food-category-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.food-category-inner a {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  min-height: 65px;
+  border-bottom: 2px solid transparent;
+  color: var(--food-espresso);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.food-category-inner a:hover,
+.food-category-inner a.is-active {
+  border-bottom-color: var(--food-espresso);
+}
+
+.food-concept-notice {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  color: #765C48;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* MENU CHAPTERS */
+
+.food-chapter {
+  padding: 100px 5%;
+  scroll-margin-top: 155px;
+  background: var(--food-oat);
+}
+
+.food-chapter-soft {
+  background: var(--food-soft);
+}
+
+.food-chapter-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 55px;
+}
+
+.food-chapter-heading h2 {
+  margin: 18px 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(62px, 7vw, 105px);
+  font-weight: 500;
+  line-height: .9;
+  letter-spacing: -.04em;
+  color: var(--food-espresso);
+}
+
+.food-chapter-heading h2 em {
+  font-weight: 400;
+}
+
+.food-chapter-heading > p {
+  max-width: 280px;
+  margin: 0;
+  color: #765C48;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* FOOD CARDS */
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.food-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.food-card-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--food-espresso);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.food-card-button img {
+  display: block;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.food-grid-two .food-card-button img {
+  height: 470px;
+}
+
+.food-card-button:hover img {
+  transform: translateY(-4px);
+}
+
+.food-card-details {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 22px;
+}
+
+.food-card-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(29px, 3vw, 40px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.food-card-price {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.food-card-description {
+  display: block;
+  margin-top: 12px;
+  color: #765C48;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.food-card-link {
+  display: inline-block;
+  margin-top: 16px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid currentColor;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* COFFEE BAR */
+
+.food-drinks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 65px;
+}
+
+.food-drink {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 20px;
+  width: 100%;
+  padding: 25px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(67, 44, 36, .2);
+  background: transparent;
+  color: var(--food-espresso);
+  text-align: left;
+  cursor: pointer;
+}
+
+.food-drink span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+}
+
+.food-drink strong {
+  align-self: center;
+  font-size: 14px;
+}
+
+.food-drink small {
+  grid-column: 1 / -1;
+  color: #765C48;
+  font-size: 12px;
+}
+
+.food-drink:hover span {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* CLOSING */
+
+.food-closing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+  background: var(--food-espresso);
+  color: var(--food-oat);
+}
+
+.food-closing-art {
+  display: grid;
+  place-items: center;
+  min-height: 500px;
+  background: #87916A;
+}
+
+.food-closing-art span {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(100px, 16vw, 220px);
+  font-weight: 700;
+  letter-spacing: -.1em;
+}
+
+.food-closing-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 10%;
+}
+
+.food-closing-copy .eyebrow {
+  color: var(--food-oat);
+}
+
+.food-closing-copy h2 {
+  margin: 24px 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(58px, 6vw, 100px);
+  font-weight: 500;
+  line-height: .9;
+}
+
+.food-closing-copy p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.food-closing-button {
+  margin-top: 20px;
+  background: var(--food-oat);
+  color: var(--food-espresso);
+}
+
+/* FOOD DETAIL MODAL */
+
+.food-modal-backdrop[hidden] {
+  display: none !important;
+}
+
+.food-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(25, 15, 11, .65);
+}
+
+.food-modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: .85fr 1fr;
+  width: min(900px, 100%);
+  max-height: 90dvh;
+  overflow-y: auto;
+  background: var(--food-oat);
+  color: var(--food-espresso);
+  outline: none;
+}
+
+.food-modal:has(.food-modal-image[hidden]) {
+  grid-template-columns: 1fr;
+  width: min(560px, 100%);
+}
+
+.food-modal-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 530px;
+  object-fit: cover;
+}
+
+.food-modal-content {
+  padding: 60px 45px 45px;
+}
+
+.food-modal-content h2 {
+  margin: 18px 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(43px, 5vw, 65px);
+  font-weight: 500;
+  line-height: .95;
+}
+
+.food-modal-content > p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+#food-modal-price {
+  display: block;
+  margin: 20px 0;
+  font-size: 21px;
+}
+
+.food-modal-meta {
+  padding-top: 12px;
+  border-top: 1px solid rgba(67, 44, 36, .2);
+}
+
+.food-modal-meta h3 {
+  margin: 20px 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.food-modal-meta p {
+  margin: 0;
+  color: #765C48;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.food-modal-pairing {
+  margin-top: 25px;
+  padding: 20px;
+  background: #E5D5C0;
+}
+
+.food-modal-pairing p {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.food-modal-disclaimer {
+  margin-top: 25px;
+  font-size: 11px !important;
+  color: #765C48;
+}
+
+.food-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--food-oat);
+  color: var(--food-espresso);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+  .food-hero {
+    min-height: 650px;
+    min-height: 78svh;
+  }
+
+  .food-hero-content {
+    padding: 80px 24px;
+  }
+
+  .food-hero h1 {
+    font-size: clamp(58px, 12vw, 84px);
+  }
+
+  .food-category-nav {
+    top: 68px;
+  }
+
+  .food-category-inner {
+    justify-content: flex-start;
+    gap: 28px;
+  }
+
+  .food-category-inner a {
+    min-height: 58px;
+  }
+
+  .food-chapter {
+    padding: 70px 24px;
+    scroll-margin-top: 135px;
+  }
+
+  .food-chapter-heading {
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .food-chapter-heading h2 {
+    font-size: 62px;
+  }
+
+  .food-chapter-heading > p {
+    margin-top: 20px;
+  }
+
+  .food-grid,
+  .food-grid-two,
+  .food-drinks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-card-button img,
+  .food-grid-two .food-card-button img {
+    height: 350px;
+  }
+
+  .food-grid {
+    gap: 45px;
+  }
+
+  .food-drinks-grid {
+    gap: 0;
+  }
+
+  .food-closing {
+    grid-template-columns: 1fr;
+  }
+
+  .food-closing-art {
+    min-height: 300px;
+  }
+
+  .food-closing-copy {
+    padding: 70px 24px;
+  }
+
+  .food-modal-backdrop {
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .food-modal,
+  .food-modal:has(.food-modal-image[hidden]) {
+    display: block;
+    width: 100%;
+    max-height: 92dvh;
+    border-radius: 22px 22px 0 0;
+  }
+
+  .food-modal-image img {
+    min-height: 0;
+    height: 230px;
+  }
+
+  .food-modal-content {
+    padding: 35px 24px 45px;
+  }
+
+  .food-modal-content h2 {
+    font-size: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .food-card-button img {
+    transition: none;
+  }
+}

@@ -1,0 +1,222 @@
+
+/* ==========================================================
+   COFICITO — BILINGUAL RESPONSIVE REFINEMENTS
+   BEMA Studios
+   Home / Visit / Story / Contact
+   ========================================================== */
+
+/* Prevent oversized translated text from overflowing */
+
+.site-header,
+.header-inner,
+.header-actions,
+main,
+footer {
+  min-width: 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.language-option {
+  cursor: pointer;
+  font: inherit;
+  background: transparent;
+  border: 0;
+  padding: 5px 3px;
+}
+
+.language-option.is-active {
+  font-weight: 700;
+}
+
+.story-hero-content,
+.story-intro-layout,
+.story-chapter-content,
+.story-ending,
+.contact-hero,
+.contact-editorial,
+.contact-form-panel,
+.contact-ending,
+.visit-hero,
+.visit-welcome,
+.visit-space,
+.visit-rituals,
+.visit-atmosphere,
+.visit-closing {
+  min-width: 0;
+}
+
+.story-hero h1,
+.story-intro h2,
+.story-chapter h2,
+.story-quote blockquote,
+.story-ending h2,
+.contact-hero h1,
+.contact-editorial h2,
+.contact-success h3,
+.contact-ending h2 {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* Tablet and mobile navigation */
+
+@media (max-width: 1100px) {
+
+  .story-menu-toggle,
+  .contact-menu-toggle,
+  .visit-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .story-mobile-nav:not([hidden]),
+  .contact-mobile-nav:not([hidden]),
+  #visit-mobile-nav:not([hidden]) {
+    position: fixed;
+    top: 68px;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: min(340px, 100%);
+    padding: 32px 28px;
+    background: var(--oat, #F2E8D8);
+    box-shadow: -15px 0 40px rgba(67, 44, 36, 0.12);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .story-mobile-nav a,
+  .contact-mobile-nav a,
+  #visit-mobile-nav a {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 29px;
+    line-height: 1.15;
+  }
+}
+
+/* Compact mobile */
+
+@media (max-width: 767px) {
+
+  .header-inner {
+    gap: 10px;
+  }
+
+  .header-actions {
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .language-switcher {
+    gap: 3px;
+    font-size: 12px;
+  }
+
+  .language-option {
+    padding: 6px 2px;
+    font-size: 12px;
+  }
+
+  .story-shop-link,
+  .contact-shop-link,
+  .visit-shop-link {
+    display: none;
+  }
+
+  .story-menu-toggle,
+  .contact-menu-toggle,
+  .visit-menu-toggle {
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .story-hero-content,
+  .contact-hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .story-hero h1,
+  .contact-hero h1 {
+    font-size: clamp(44px, 11vw, 72px);
+    line-height: 0.98;
+  }
+
+  .story-intro h2,
+  .story-chapter h2,
+  .story-ending h2,
+  .contact-editorial h2,
+  .contact-ending h2 {
+    font-size: clamp(38px, 9vw, 60px);
+    line-height: 1.04;
+  }
+
+  .story-quote blockquote {
+    font-size: clamp(36px, 9vw, 58px);
+    line-height: 1.08;
+  }
+
+  .contact-form-panel,
+  .contact-editorial,
+  .contact-form,
+  .contact-field {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .contact-field input,
+  .contact-field textarea {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .contact-ending-links,
+  .story-ending-links {
+    flex-wrap: wrap;
+  }
+}
+
+/* Very small phones */
+
+@media (max-width: 390px) {
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .language-switcher {
+    font-size: 11px;
+  }
+
+  .story-hero h1,
+  .contact-hero h1 {
+    font-size: clamp(38px, 10.5vw, 48px);
+  }
+
+  .story-mobile-nav:not([hidden]),
+  .contact-mobile-nav:not([hidden]),
+  #visit-mobile-nav:not([hidden]) {
+    width: 100%;
+    padding: 26px 20px;
+  }
+}

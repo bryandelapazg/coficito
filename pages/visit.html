@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F2E8D8">
+
+  <title>Visit Us — Coficito.</title>
+  <meta name="description" content="Step inside the imagined world of Coficito, a fictional specialty coffee concept set in Round Rock, Texas.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/visit.css">
+
+  <script src="../js/translations.js" defer></script>
+  <script src="../js/visit-i18n.js" defer></script>
+  <script src="../js/visit.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="../index.html" class="wordmark" aria-label="Coficito home">
+        coficito<span>.</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="../index.html" data-i18n="nav.home">Home</a>
+        <a href="shop.html" data-i18n="nav.shop">Shop</a>
+        <a href="food.html" data-i18n="nav.food">Food &amp; Brunch</a>
+        <a href="recipes.html" data-i18n="nav.recipes">Recipes</a>
+        <a href="visit.html" aria-current="page" data-i18n="nav.visit">Visit Us</a>
+        <a href="story.html" data-i18n="nav.story">Our Story</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+
+        <div class="language-switcher" role="group" aria-label="Select language">
+          <button type="button" class="language-option" data-lang="es" aria-pressed="false">ES</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" class="language-option is-active" data-lang="en" aria-pressed="true">EN</button>
+        </div>
+
+        <a href="shop.html" class="visit-shop-link" aria-label="Explore the shop">
+          <span data-i18n="nav.shop">Shop</span> ↗
+        </a>
+
+        <button class="visit-menu-toggle" type="button"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="visit-mobile-nav">
+          ☰
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <nav class="visit-mobile-nav" id="visit-mobile-nav"
+       aria-label="Mobile navigation" hidden>
+    <a href="../index.html" data-i18n="nav.home">Home</a>
+    <a href="shop.html" data-i18n="nav.shop">Shop</a>
+    <a href="food.html" data-i18n="nav.food">Food &amp; Brunch</a>
+    <a href="recipes.html" data-i18n="nav.recipes">Recipes</a>
+    <a href="visit.html" aria-current="page" data-i18n="nav.visit">Visit Us</a>
+    <a href="story.html" data-i18n="nav.story">Our Story</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="visit-hero" aria-labelledby="visit-hero-title">
+      <div class="visit-hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=2200&q=85"
+          alt="Warm café interior with natural light and wood finishes"
+          fetchpriority="high">
+      </div>
+
+      <div class="visit-hero-shade"></div>
+
+      <div class="visit-hero-content">
+        <span class="visit-eyebrow" data-visit="hero-eyebrow">THE WORLD OF COFICITO</span>
+        <h1 id="visit-hero-title" data-visit="hero-title">
+          Your little corner<br>
+          of <em>comfort.</em>
+        </h1>
+        <p data-visit="hero-description">Imagined in Round Rock, Texas.</p>
+      </div>
+    </section>
+
+    <!-- NOTICE -->
+    <aside class="visit-concept-notice" aria-label="Concept café disclosure">
+      <span data-visit="notice-label">CONCEPT SPACE</span>
+      <p data-visit="notice-description">
+        A concept café by BEMA Studios.
+        Not an operating location.
+      </p>
+    </aside>
+
+    <!-- WELCOME -->
+    <section class="visit-welcome">
+      <div class="visit-welcome-copy">
+        <span class="visit-eyebrow" data-visit="welcome-eyebrow">
+          01 / WELCOME TO COFICITO
+        </span>
+        <h2 data-visit="welcome-title">
+          A place to<br><em>feel at home.</em>
+        </h2>
+      </div>
+
+      <div class="visit-welcome-description">
+        <p data-visit="welcome-p1">
+          A little warmth. A little quiet.
+          A place imagined for slow mornings,
+          familiar faces and coffee worth savoring.
+        </p>
+        <p data-visit="welcome-p2">
+          Nothing complicated. Just thoughtful
+          details and moments that feel like yours.
+        </p>
+      </div>
+    </section>
+
+    <!-- A SPACE TO STAY -->
+    <section class="visit-space">
+      <div class="visit-section-heading">
+        <div>
+          <span class="visit-eyebrow" data-visit="space-eyebrow">02 / THE SPACE</span>
+          <h2 data-visit="space-title">A space<br>to <em>stay.</em></h2>
+        </div>
+        <p data-visit="space-description">
+          Warm wood, soft light and the kind of
+          atmosphere that invites you to linger.
+        </p>
+      </div>
+
+      <div class="visit-gallery">
+        <figure class="visit-gallery-main">
+          <img
+            src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=85"
+            alt="Conceptual café seating and interior architecture"
+            loading="lazy">
+          <figcaption data-visit="gallery-one">
+            01 / A LITTLE ROOM TO SLOW DOWN
+          </figcaption>
+        </figure>
+
+        <figure class="visit-gallery-small visit-gallery-small-top">
+          <img
+            src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85"
+            alt="Coffee and warm café details"
+            loading="lazy">
+          <figcaption data-visit="gallery-two">
+            02 / THOUGHTFUL DETAILS
+          </figcaption>
+        </figure>
+
+        <figure class="visit-gallery-small visit-gallery-small-bottom">
+          <img
+            src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?auto=format&fit=crop&w=1000&q=85"
+            alt="Warm minimalist café atmosphere"
+            loading="lazy">
+          <figcaption data-visit="gallery-three">
+            03 / A MOMENT OF QUIET
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- MADE FOR LITTLE RITUALS -->
+    <section class="visit-rituals">
+      <div class="visit-rituals-image">
+        <img
+          src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1400&q=85"
+          alt="Coffee being enjoyed in a warm setting"
+          loading="lazy">
+      </div>
+
+      <div class="visit-rituals-content">
+        <span class="visit-eyebrow" data-visit="rituals-eyebrow">
+          03 / MADE FOR LITTLE RITUALS
+        </span>
+        <h2 data-visit="rituals-title">
+          The little things<br><em>matter most.</em>
+        </h2>
+        <p data-visit="rituals-p1">
+          The first sip. A familiar conversation.
+          A few extra minutes with nowhere else to be.
+        </p>
+        <p data-visit="rituals-p2">
+          Coficito is imagined around the beauty
+          of everyday rituals.
+        </p>
+      </div>
+    </section>
+
+    <!-- ATMOSPHERE -->
+    <section class="visit-atmosphere">
+      <span class="visit-eyebrow" data-visit="atmosphere-eyebrow">
+        04 / THE ATMOSPHERE
+      </span>
+
+      <h2 data-visit="atmosphere-title">
+        Soft mornings.<br>
+        Warm cups.<br>
+        <em>Lovely company.</em>
+      </h2>
+
+      <div class="visit-atmosphere-details">
+        <div>
+          <span>01</span>
+          <strong data-visit="detail-one-title">Natural light</strong>
+          <p data-visit="detail-one-description">
+            Gentle mornings and an unhurried feeling.
+          </p>
+        </div>
+
+        <div>
+          <span>02</span>
+          <strong data-visit="detail-two-title">Thoughtful textures</strong>
+          <p data-visit="detail-two-description">
+            Oak, ceramics and quiet earthy tones.
+          </p>
+        </div>
+
+        <div>
+          <span>03</span>
+          <strong data-visit="detail-three-title">Everyday comfort</strong>
+          <p data-visit="detail-three-description">
+            A little space for moments that matter.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="visit-closing">
+      <span class="visit-eyebrow" data-visit="closing-eyebrow">
+        05 / EXPLORE THE RITUAL
+      </span>
+
+      <h2 data-visit="closing-title">
+        The feeling starts<br>
+        with a <em>little cup.</em>
+      </h2>
+
+      <div class="visit-closing-links">
+        <a href="shop.html" data-visit="closing-shop">
+          Explore Our Coffee ↗
+        </a>
+        <a href="food.html" data-visit="closing-food">
+          Food &amp; Brunch ↗
+        </a>
+      </div>
+
+      <p data-visit="closing-disclaimer">
+        Coficito is a fictional brand and café concept,
+        created as a design project by BEMA Studios.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../index.html" class="wordmark footer-wordmark">
+          coficito<span>.</span>
+        </a>
+        <p data-visit="footer-tagline">A little coffee. A lot of feeling.</p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../index.html" data-i18n="nav.home">Home</a>
+        <a href="shop.html" data-i18n="nav.shop">Shop</a>
+        <a href="food.html" data-i18n="nav.food">Food &amp; Brunch</a>
+        <a href="recipes.html" data-i18n="nav.recipes">Recipes</a>
+        <a href="visit.html" data-i18n="nav.visit">Visit Us</a>
+        <a href="story.html" data-i18n="nav.story">Our Story</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span data-visit="footer-one">
+        Coficito. · A little coffee. A lot of feeling.
+      </span>
+      <span data-visit="footer-two">
+        Fictional concept café · Round Rock, Texas
+      </span>
+      <span data-visit="footer-three">
+        A brand concept by BEMA Studios.
+      </span>
+    </div>
+  </footer>
+
+</body>
+</html>

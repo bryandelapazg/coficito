@@ -1,0 +1,944 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F2E8D8">
+
+  <title>Food & Brunch — Coficito.</title>
+  <meta
+    name="description"
+    content="Discover the fictional Coficito brunch menu: avocado toast, pancakes, waffles and specialty coffee."
+  >
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/food.css">
+
+  <!-- JAVASCRIPT -->
+  <script src="../js/translations.js" defer></script>
+  <script src="../js/food-i18n.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/food.js" defer></script>
+</head>
+
+<body>
+
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a
+        href="../index.html"
+        class="wordmark"
+        aria-label="Coficito home"
+      >
+        coficito<span>.</span>
+      </a>
+
+      <!-- DESKTOP NAVIGATION -->
+      <nav class="desktop-nav" aria-label="Main navigation">
+
+        <a href="../index.html" data-i18n="nav.home">
+          Home
+        </a>
+
+        <a href="shop.html" data-i18n="nav.shop">
+          Shop
+        </a>
+
+        <a
+          href="food.html"
+          aria-current="page"
+          data-i18n="nav.food"
+        >
+          Food &amp; Brunch
+        </a>
+
+        <a href="recipes.html" data-i18n="nav.recipes">
+          Recipes
+        </a>
+
+        <a href="visit.html" data-i18n="nav.visit">
+          Visit Us
+        </a>
+
+        <a href="story.html" data-i18n="nav.story">
+          Our Story
+        </a>
+
+        <a href="contact.html" data-i18n="nav.contact">
+          Contact
+        </a>
+
+      </nav>
+
+      <!-- HEADER ACTIONS -->
+      <div class="header-actions">
+
+        <!-- LANGUAGE SWITCHER -->
+        <div
+          class="language-switcher"
+          role="group"
+          aria-label="Select language"
+        >
+          <button
+            type="button"
+            class="language-option"
+            data-lang="es"
+            aria-pressed="false"
+          >
+            ES
+          </button>
+
+          <span aria-hidden="true">/</span>
+
+          <button
+            type="button"
+            class="language-option is-active"
+            data-lang="en"
+            aria-pressed="true"
+          >
+            EN
+          </button>
+        </div>
+
+        <!-- SHOP BAG LINK -->
+        <a
+          class="food-bag-link"
+          href="shop.html"
+          aria-label="Explore the concept shop"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 8h14l1 12H4L5 8Z"></path>
+            <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+          </svg>
+        </a>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button
+          class="icon-button menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================
+       MOBILE NAVIGATION
+       ===================================================== -->
+
+  <nav
+    class="mobile-nav"
+    id="mobile-nav"
+    aria-label="Mobile navigation"
+    hidden
+  >
+    <a href="../index.html" data-i18n="nav.home">
+      Home
+    </a>
+
+    <a href="shop.html" data-i18n="nav.shop">
+      Shop
+    </a>
+
+    <a
+      href="food.html"
+      aria-current="page"
+      data-i18n="nav.food"
+    >
+      Food &amp; Brunch
+    </a>
+
+    <a href="recipes.html" data-i18n="nav.recipes">
+      Recipes
+    </a>
+
+    <a href="visit.html" data-i18n="nav.visit">
+      Visit Us
+    </a>
+
+    <a href="story.html" data-i18n="nav.story">
+      Our Story
+    </a>
+
+    <a href="contact.html" data-i18n="nav.contact">
+      Contact
+    </a>
+  </nav>
+
+  <!-- =====================================================
+       MAIN CONTENT
+       ===================================================== -->
+
+  <main id="main-content">
+
+    <!-- ===================================================
+         01 / FOOD HERO
+         =================================================== -->
+
+    <section
+      class="food-hero"
+      aria-labelledby="food-hero-title"
+    >
+
+      <div class="food-hero-photo">
+        <img
+          src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=2200&q=85"
+          alt="Brunch served in warm natural light"
+          fetchpriority="high"
+        >
+      </div>
+
+      <div class="food-hero-shade"></div>
+
+      <div class="food-hero-content">
+
+        <span class="eyebrow">
+          COFICITO / FOOD &amp; BRUNCH
+        </span>
+
+        <h1 id="food-hero-title">
+          Little bites.<br>
+          <em>Lovely moments.</em>
+        </h1>
+
+        <p>
+          Something good for every little pause.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ===================================================
+         02 / CATEGORY NAVIGATION
+         =================================================== -->
+
+    <nav
+      class="food-category-nav"
+      aria-label="Brunch categories"
+    >
+      <div class="food-category-inner">
+
+        <a href="#greens" class="is-active">
+          The Greens
+        </a>
+
+        <a href="#fluffy">
+          The Fluffy Ones
+        </a>
+
+        <a href="#crispy">
+          The Crispy Ones
+        </a>
+
+        <a href="#coffee-bar">
+          The Coffee Bar
+        </a>
+
+      </div>
+    </nav>
+
+    <!-- CONCEPT DISCLAIMER -->
+    <p class="food-concept-notice">
+      A fictional menu by BEMA Studios. Items, ingredients,
+      allergens and prices are illustrative.
+      No food orders are available.
+    </p>
+
+    <!-- ===================================================
+         03 / THE GREENS
+         =================================================== -->
+
+    <section
+      class="food-chapter"
+      id="greens"
+      aria-labelledby="greens-title"
+    >
+
+      <div class="food-chapter-heading">
+
+        <div>
+          <span class="eyebrow">
+            01 / SOMETHING FRESH
+          </span>
+
+          <h2 id="greens-title">
+            The <em>Greens.</em>
+          </h2>
+        </div>
+
+        <p>
+          Fresh, bright and made for slow mornings.
+        </p>
+
+      </div>
+
+      <div class="food-grid">
+
+        <!-- CLASSIC AVO -->
+        <article class="food-card">
+
+          <button
+            type="button"
+            class="food-card-button"
+            data-food="classic-avo"
+            aria-label="View The Classic Avo details"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=900&q=85"
+              alt="Avocado toast brunch plate"
+              loading="lazy"
+            >
+
+            <span class="food-card-details">
+              <span class="food-card-name">
+                The Classic Avo
+              </span>
+
+              <span class="food-card-price">
+                $13
+              </span>
+            </span>
+
+            <span class="food-card-description">
+              Sourdough, avocado and a little sunshine.
+            </span>
+
+            <span class="food-card-link">
+              Discover this dish ↗
+            </span>
+
+          </button>
+        </article>
+
+        <!-- GREEN GARDEN -->
+        <article class="food-card">
+
+          <button
+            type="button"
+            class="food-card-button"
+            data-food="green-garden"
+            aria-label="View The Green Garden details"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85"
+              alt="Fresh greens and vegetables on a plate"
+              loading="lazy"
+            >
+
+            <span class="food-card-details">
+              <span class="food-card-name">
+                The Green Garden
+              </span>
+
+              <span class="food-card-price">
+                $14
+              </span>
+            </span>
+
+            <span class="food-card-description">
+              A little more green, a lot more lovely.
+            </span>
+
+            <span class="food-card-link">
+              Discover this dish ↗
+            </span>
+
+          </button>
+        </article>
+
+        <!-- SMOKED AVO -->
+        <article class="food-card">
+
+          <button
+            type="button"
+            class="food-card-button"
+            data-food="smoked-avo"
+            aria-label="View The Smoked Avo details"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=900&q=85"
+              alt="Artisan toast with brunch toppings"
+              loading="lazy"
+            >
+
+            <span class="food-card-details">
+              <span class="food-card-name">
+                The Smoked Avo
+              </span>
+
+              <span class="food-card-price">
+                $16
+              </span>
+            </span>
+
+            <span class="food-card-description">
+              A familiar favorite with a savory twist.
+            </span>
+
+            <span class="food-card-link">
+              Discover this dish ↗
+            </span>
+
+          </button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================================================
+         04 / THE FLUFFY ONES
+         =================================================== -->
+
+    <section
+      class="food-chapter food-chapter-soft"
+      id="fluffy"
+      aria-labelledby="fluffy-title"
+    >
+
+      <div class="food-chapter-heading">
+
+        <div>
+          <span class="eyebrow">
+            02 / SOFT &amp; SWEET
+          </span>
+
+          <h2 id="fluffy-title">
+            The <em>Fluffy Ones.</em>
+          </h2>
+        </div>
+
+        <p>
+          For the mornings that deserve a little extra.
+        </p>
+
+      </div>
+
+      <div class="food-grid food-grid-two">
+
+        <!-- CLOUD NINE -->
+        <article class="food-card">
+
+          <button
+            type="button"
+            class="food-card-button"
+            data-food="cloud-nine"
+            aria-label="View Cloud Nine details"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=1000&q=85"
+              alt="Fluffy pancakes with berries"
+              loading="lazy"
+            >
+
+            <span class="food-card-details">
+              <span class="food-card-name">
+                Cloud Nine
+              </span>
+
+              <span class="food-card-price">
+                $14
+              </span>
+            </span>
+
+            <span class="food-card-description">
+              Soft pancakes, berries and maple.
+            </span>
+
+            <span class="food-card-link">
+              Discover this dish ↗
+            </span>
+
+          </button>
+        </article>
+
+        <!-- SAVORY STACK -->
+        <article class="food-card">
+
+          <button
+            type="button"
+            class="food-card-button"
+            data-food="savory-stack"
+            aria-label="View The Savory Stack details"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=1000&q=85"
+              alt="Stack of brunch pancakes"
+              loading="lazy"
+            >
+
+            <span class="food-card-details">
+              <span class="food-card-name">
+                The Savory Stack
+              </span>
+
+              <span class="food-card-price">
+                $16
+              </span>
+            </span>
+
+            <span class="food-card-description">
+              A comforting little savory stack.
+            </span>
+
+            <span class="food-card-link">
+              Discover this dish ↗
+            </span>
+
+          </button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================================================
+         05 / THE CRISPY ONES
+         =================================================== -->
+
+    <section
+      class="food-chapter"
+      id="crispy"
+      aria-labelledby="crispy-title"
+    >
+
+      <div class="food-chapter-heading">
+
+        <div>
+          <span class="eyebrow">
+            03 / GOLDEN &amp; GOOD
+          </span>
+
+          <h2 id="crispy-title">
+            The <em>Crispy Ones.</em>
+          </h2>
+        </div>
+
+        <p>
+          Golden edges. Happy little mornings.
+        </p>
+
+      </div>
+
+      <div class="food-grid food-grid-two">
+
+        <!-- BERRY WAFFLE -->
+        <article class="food-card">
+
+          <button
+            type="button"
+            class="food-card-button"
+            data-food="berry-waffle"
+            aria-label="View Berry Little Waffle details"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=1000&q=85"
+              alt="Golden waffle with sweet toppings"
+              loading="lazy"
+            >
+
+            <span class="food-card-details">
+              <span class="food-card-name">
+                Berry Little Waffle
+              </span>
+
+              <span class="food-card-price">
+                $14
+              </span>
+            </span>
+
+            <span class="food-card-description">
+              A golden waffle with berries and cream.
+            </span>
+
+            <span class="food-card-link">
+              Discover this dish ↗
+            </span>
+
+          </button>
+        </article>
+
+        <!-- BRUNCH WAFFLE -->
+        <article class="food-card">
+
+          <button
+            type="button"
+            class="food-card-button"
+            data-food="brunch-waffle"
+            aria-label="View The Brunch Waffle details"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=1000&q=85"
+              alt="Freshly made waffle"
+              loading="lazy"
+            >
+
+            <span class="food-card-details">
+              <span class="food-card-name">
+                The Brunch Waffle
+              </span>
+
+              <span class="food-card-price">
+                $17
+              </span>
+            </span>
+
+            <span class="food-card-description">
+              The sweet-and-savory kind of morning.
+            </span>
+
+            <span class="food-card-link">
+              Discover this dish ↗
+            </span>
+
+          </button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===================================================
+         06 / THE COFFEE BAR
+         =================================================== -->
+
+    <section
+      class="food-chapter food-chapter-soft"
+      id="coffee-bar"
+      aria-labelledby="coffee-bar-title"
+    >
+
+      <div class="food-chapter-heading">
+
+        <div>
+          <span class="eyebrow">
+            04 / SOMETHING TO SIP
+          </span>
+
+          <h2 id="coffee-bar-title">
+            The <em>Coffee Bar.</em>
+          </h2>
+        </div>
+
+        <p>
+          Your favorite little cup, just the way you like it.
+        </p>
+
+      </div>
+
+      <div class="food-drinks-grid">
+
+        <!-- ESPRESSO -->
+        <button
+          type="button"
+          data-food="espresso"
+          class="food-drink"
+        >
+          <span>Espresso</span>
+          <strong>$4</strong>
+          <small>Small cup. Big character.</small>
+        </button>
+
+        <!-- CAPPUCCINO -->
+        <button
+          type="button"
+          data-food="cappuccino"
+          class="food-drink"
+        >
+          <span>Cappuccino</span>
+          <strong>$5</strong>
+          <small>Espresso, milk and a soft cloud of foam.</small>
+        </button>
+
+        <!-- VANILLA LATTE -->
+        <button
+          type="button"
+          data-food="vanilla-latte"
+          class="food-drink"
+        >
+          <span>Vanilla Latte</span>
+          <strong>$6</strong>
+          <small>Soft, smooth and a little sweet.</small>
+        </button>
+
+        <!-- ICED LATTE -->
+        <button
+          type="button"
+          data-food="iced-latte"
+          class="food-drink"
+        >
+          <span>Iced Latte</span>
+          <strong>$6</strong>
+          <small>A cool little coffee moment.</small>
+        </button>
+
+        <!-- MATCHA LATTE -->
+        <button
+          type="button"
+          data-food="matcha-latte"
+          class="food-drink"
+        >
+          <span>Matcha Latte</span>
+          <strong>$6</strong>
+          <small>A gentle green ritual.</small>
+        </button>
+
+        <!-- COLD BREW -->
+        <button
+          type="button"
+          data-food="cold-brew"
+          class="food-drink"
+        >
+          <span>Cold Brew</span>
+          <strong>$5</strong>
+          <small>Slow brewed. Smoothly enjoyed.</small>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ===================================================
+         07 / TAKE THE RITUAL HOME
+         =================================================== -->
+
+    <section
+      class="food-closing"
+      aria-labelledby="food-closing-title"
+    >
+
+      <div class="food-closing-art">
+        <span>co.</span>
+      </div>
+
+      <div class="food-closing-copy">
+
+        <span class="eyebrow">
+          A LITTLE SOMETHING FOR HOME
+        </span>
+
+        <h2 id="food-closing-title">
+          Take the ritual <em>home.</em>
+        </h2>
+
+        <p>
+          Meet Colombia Huila, a little everyday favorite.
+        </p>
+
+        <a
+          href="shop.html"
+          class="button food-closing-button"
+        >
+          Explore Our Coffee ↗
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <a
+          href="../index.html"
+          class="wordmark footer-wordmark"
+        >
+          coficito<span>.</span>
+        </a>
+
+        <p>
+          A little coffee. A lot of feeling.
+        </p>
+
+      </div>
+
+      <nav
+        class="footer-links"
+        aria-label="Footer navigation"
+      >
+
+        <a href="../index.html" data-i18n="nav.home">
+          Home
+        </a>
+
+        <a href="shop.html" data-i18n="nav.shop">
+          Shop
+        </a>
+
+        <a href="food.html" data-i18n="nav.food">
+          Food &amp; Brunch
+        </a>
+
+        <a href="recipes.html" data-i18n="nav.recipes">
+          Recipes
+        </a>
+
+        <a href="visit.html" data-i18n="nav.visit">
+          Visit Us
+        </a>
+
+        <a href="story.html" data-i18n="nav.story">
+          Our Story
+        </a>
+
+        <a href="contact.html" data-i18n="nav.contact">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <span>
+        Coficito. · A little coffee. A lot of feeling.
+      </span>
+
+      <span>
+        Fictional concept café · Round Rock, Texas
+      </span>
+
+      <span>
+        A brand concept by BEMA Studios.
+      </span>
+
+    </div>
+
+  </footer>
+
+  <!-- =====================================================
+       FOOD DETAIL MODAL
+       ===================================================== -->
+
+  <div
+    id="food-modal-backdrop"
+    class="food-modal-backdrop"
+    hidden
+  >
+
+    <section
+      id="food-modal"
+      class="food-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="food-modal-title"
+      tabindex="-1"
+    >
+
+      <button
+        id="food-modal-close"
+        class="food-modal-close"
+        type="button"
+        aria-label="Close food details"
+      >
+        ×
+      </button>
+
+      <div
+        class="food-modal-image"
+        id="food-modal-image"
+        hidden
+      >
+        <img
+          id="food-modal-photo"
+          src=""
+          alt=""
+        >
+      </div>
+
+      <div class="food-modal-content">
+
+        <span
+          class="eyebrow"
+          id="food-modal-category"
+        ></span>
+
+        <h2 id="food-modal-title"></h2>
+
+        <p id="food-modal-description"></p>
+
+        <strong id="food-modal-price"></strong>
+
+        <div class="food-modal-meta">
+
+          <h3>What's inside</h3>
+          <p id="food-modal-ingredients"></p>
+
+          <h3>Allergen information</h3>
+          <p id="food-modal-allergens"></p>
+
+        </div>
+
+        <div
+          id="food-modal-pairing"
+          class="food-modal-pairing"
+          hidden
+        >
+
+          <span class="eyebrow">
+            A LITTLE PAIRING
+          </span>
+
+          <p id="food-modal-pairing-text"></p>
+
+        </div>
+
+        <p class="food-modal-disclaimer">
+          Illustrative ingredients and allergens for a fictional
+          menu. Not suitable for making dietary or allergy
+          decisions. No food orders are available.
+        </p>
+
+      </div>
+
+    </section>
+  </div>
+
+</body>
+</html>

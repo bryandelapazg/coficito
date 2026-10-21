@@ -1,0 +1,2237 @@
+
+
+:root {
+
+  --space-sm: clamp(12px, 1.5vw, 20px);
+
+  --space-md: clamp(24px, 3vw, 40px);
+
+  --space-lg: clamp(40px, 5vw, 72px);
+
+  --espresso: #432C24;
+
+  --oat: #F2E8D8;
+
+  --caramel: #D7A779;
+
+  --sage: #87916A;
+
+  --white: #FFFFFF;
+
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+
+  --font-body: "DM Sans", Arial, sans-serif;
+
+  --font-brand: "Manrope", Arial, sans-serif;
+
+  --container: 1440px;
+
+}
+
+\* {
+
+  box-sizing: border-box;
+
+}
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+body {
+
+  margin: 0;
+
+  background: var(--oat);
+
+  color: var(--espresso);
+
+  font-family: var(--font-body);
+
+  -webkit-font-smoothing: antialiased;
+
+}
+
+a {
+
+  color: inherit;
+
+  text-decoration: none;
+
+}
+
+button {
+
+  font: inherit;
+
+}
+
+img {
+
+  display: block;
+
+  max-width: 100%;
+
+}
+
+.site-header {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+
+  background: var(--oat);
+
+  border-bottom: 1px solid rgba(67, 44, 36, .1);
+
+}
+
+.header-inner {
+
+  max-width: var(--container);
+
+  margin: auto;
+
+  min-height: 84px;
+
+  padding: 0 5%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 32px;
+
+}
+
+.wordmark {
+
+  font-family: var(--font-brand);
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  letter-spacing: -.075em;
+
+  white-space: nowrap;
+
+}
+
+.wordmark span {
+
+  color: var(--caramel);
+
+}
+
+.desktop-nav,
+
+.header-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+}
+
+.desktop-nav a {
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  transition: opacity .25s ease;
+
+}
+
+.desktop-nav a:hover {
+
+  opacity: .55;
+
+}
+
+.header-actions {
+
+  gap: 16px;
+
+}
+
+.language-label {
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+}
+
+/* ==========================================
+
+   COFICITO — LANGUAGE SWITCHER
+
+========================================== */
+
+.language-switcher {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  white-space: nowrap;
+
+}
+
+.language-option {
+
+  padding: 8px 3px;
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--espresso);
+
+  font-family: var(--font-body);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+  opacity: .45;
+
+  cursor: pointer;
+
+  transition: opacity .2s ease;
+
+}
+
+.language-option:hover,
+
+.language-option.is-active {
+
+  opacity: 1;
+
+}
+
+.language-option:focus-visible {
+
+  outline: 2px solid var(--espresso);
+
+  outline-offset: 3px;
+
+  border-radius: 2px;
+
+}
+
+.language-switcher > span {
+
+  color: var(--espresso);
+
+  opacity: .3;
+
+  font-size: 11px;
+
+}
+
+.icon-button {
+
+  width: 36px;
+
+  height: 36px;
+
+  padding: 7px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--espresso);
+
+  cursor: pointer;
+
+}
+
+.icon-button svg {
+
+  width: 100%;
+
+  height: 100%;
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 1.6;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+
+}
+
+.menu-toggle,
+
+.mobile-nav {
+
+  display: none;
+
+}
+
+.hero {
+
+  position: relative;
+
+  min-height: 690px;
+
+  display: grid;
+
+  grid-template-columns: 48% 52%;
+
+  overflow: hidden;
+
+}
+
+.hero-content {
+
+  padding: 110px max(32px, 10%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+}
+
+.eyebrow {
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: .22em;
+
+}
+
+.hero h1,
+
+.section h2,
+
+.ritual-section h2 {
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(64px, 7vw, 116px);
+
+  font-weight: 500;
+
+  line-height: .91;
+
+  letter-spacing: -.04em;
+
+  margin: 30px 0;
+
+}
+
+.hero h1 em,
+
+.section h2 em,
+
+.ritual-section h2 em {
+
+  font-weight: 400;
+
+}
+
+.hero-content p {
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  margin-bottom: 34px;
+
+}
+
+.hero-visual {
+
+  min-height: 690px;
+
+}
+
+.hero-visual img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+}
+
+.button {
+
+  min-height: 48px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 24px;
+
+  padding: 15px 24px;
+
+  border-radius: 100px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  transition: transform .25s ease, background .25s ease;
+
+}
+
+.button:hover {
+
+  transform: translateY(-3px);
+
+}
+
+.button-primary {
+
+  background: var(--espresso);
+
+  color: var(--oat);
+
+}
+
+.button-outline {
+
+  border: 1px solid var(--espresso);
+
+}
+
+.hero-index {
+
+  position: absolute;
+
+  left: 5%;
+
+  bottom: 28px;
+
+  font-size: 10px;
+
+  letter-spacing: .15em;
+
+}
+
+.section {
+
+  max-width: var(--container);
+
+  margin: auto;
+
+  padding: var(--space-lg) 5%;
+
+}
+
+.section-heading {
+
+  display: flex;
+
+  align-items: end;
+
+  justify-content: space-between;
+
+  gap: var(--space-md);
+
+  margin-bottom: var(--space-md);
+
+}
+
+.section h2 {
+
+  font-size: clamp(48px, 5vw, 76px);
+
+  margin-bottom: 0;
+
+}
+
+.text-link {
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  border-bottom: 1px solid currentColor;
+
+  padding-bottom: 6px;
+
+}
+
+.product-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+
+}
+
+.product-image {
+
+  min-height: 360px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 4px;
+
+}
+
+.product-sage {
+
+  background: #87916A;
+
+}
+
+.product-caramel {
+
+  background: #D7A779;
+
+}
+
+.product-espresso {
+
+  background: #432C24;
+
+}
+
+.product-placeholder {
+
+  color: var(--oat);
+
+  font-family: var(--font-brand);
+
+  font-size: 80px;
+
+  font-weight: 700;
+
+  letter-spacing: -.08em;
+
+}
+
+.product-card h3 {
+
+  font-family: var(--font-heading);
+
+  font-size: 32px;
+
+  margin: 20px 0 6px;
+
+}
+
+.product-card p {
+
+  color: #765C48;
+
+  font-size: 12px;
+
+}
+
+.price {
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+}
+
+.ritual-section {
+
+  padding: var(--space-lg) 24px;
+
+  text-align: center;
+
+  background: #E9D9C4;
+
+}
+
+.ritual-section h2 {
+
+  font-size: clamp(58px, 7vw, 100px);
+
+}
+
+.ritual-section p {
+
+  margin-bottom: 32px;
+
+}
+
+.site-footer {
+
+  padding: 70px 5% 25px;
+
+  background: var(--espresso);
+
+  color: var(--oat);
+
+}
+
+.footer-top,
+
+.footer-bottom {
+
+  max-width: var(--container);
+
+  margin: auto;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+}
+
+.footer-wordmark {
+
+  font-size: 42px;
+
+}
+
+.footer-top p {
+
+  font-size: 13px;
+
+}
+
+.footer-links {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 18px;
+
+  max-width: 430px;
+
+}
+
+.footer-links a {
+
+  font-size: 12px;
+
+}
+
+.footer-bottom {
+
+  margin-top: 75px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, .2);
+
+  font-size: 11px;
+
+  opacity: .8;
+
+}
+
+:focus-visible {
+
+  outline: 3px solid var(--sage);
+
+  outline-offset: 4px;
+
+}
+
+/* ==========================================
+
+   COFICITO — FULL SCREEN EDITORIAL HERO
+
+========================================== */
+
+.hero-editorial {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  min-height: 760px;
+
+  min-height: calc(100svh - 84px);
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background: var(--espresso);
+
+  color: var(--oat);
+
+}
+
+/* FULL BLEED PHOTOGRAPHY */
+
+.hero-editorial .hero-background {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -2;
+
+}
+
+.hero-editorial .hero-background img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center 52%;
+
+}
+
+/* CINEMATIC OVERLAY */
+
+.hero-editorial .hero-shade {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -1;
+
+  background:
+
+    linear-gradient(
+
+      90deg,
+
+      rgba(26, 17, 13, .78) 0%,
+
+      rgba(26, 17, 13, .48) 48%,
+
+      rgba(26, 17, 13, .15) 100%
+
+    ),
+
+    linear-gradient(
+
+      0deg,
+
+      rgba(26, 17, 13, .40),
+
+      transparent 35%
+
+    );
+
+}
+
+/* MAIN CONTENT */
+
+.hero-editorial .hero-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  padding: 110px 7%;
+
+  align-items: flex-start;
+
+  text-align: left;
+
+}
+
+.hero-editorial .hero-eyebrow {
+
+  color: var(--oat);
+
+  letter-spacing: .3em;
+
+}
+
+.hero-editorial h1 {
+
+  max-width: 1050px;
+
+  margin: 30px 0 26px;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(80px, 10vw, 160px);
+
+  font-weight: 500;
+
+  line-height: .82;
+
+  letter-spacing: -.055em;
+
+  color: #FFF9F0;
+
+  text-wrap: balance;
+
+}
+
+.hero-editorial h1 em {
+
+  display: block;
+
+  font-weight: 400;
+
+  font-style: italic;
+
+}
+
+.hero-editorial .hero-content p {
+
+  margin: 0 0 36px;
+
+  font-size: 16px;
+
+  color: #FFF9F0;
+
+  letter-spacing: .02em;
+
+}
+
+.hero-editorial .hero-button {
+
+  background: var(--oat);
+
+  color: var(--espresso);
+
+  padding: 17px 27px;
+
+}
+
+.hero-editorial .hero-button:hover {
+
+  background: #FFFFFF;
+
+}
+
+/* BOTTOM EDITORIAL DETAILS */
+
+.hero-editorial .hero-bottom {
+
+  position: absolute;
+
+  left: 7%;
+
+  right: 7%;
+
+  bottom: 32px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  z-index: 2;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: .18em;
+
+  color: var(--oat);
+
+}
+
+/* ==========================================
+
+   COFICITO — HOME ADDITIONAL SECTIONS
+
+========================================== */
+
+/* BRUNCH EDITORIAL COLLAGE */
+
+.brunch-gallery {
+
+  display: grid;
+
+  grid-template-columns: 1.25fr 1fr 1fr;
+
+  gap: 18px;
+
+  align-items: stretch;
+
+}
+
+.brunch-gallery img {
+
+  width: 100%;
+
+  height: 470px;
+
+  object-fit: cover;
+
+  border-radius: 3px;
+
+}
+
+.brunch-gallery img:nth-child(2) {
+
+  margin-top: 35px;
+
+  height: 435px;
+
+}
+
+.brunch-gallery img:nth-child(3) {
+
+  margin-top: 75px;
+
+  height: 395px;
+
+}
+
+/* OUR LITTLE SPACE */
+
+.space-layout {
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 1fr;
+
+  align-items: center;
+
+  gap: clamp(40px, 7vw, 110px);
+
+}
+
+.space-image img {
+
+  width: 100%;
+
+  height: 620px;
+
+  object-fit: cover;
+
+}
+
+.space-content h2 {
+
+  font-size: clamp(52px, 5.5vw, 85px);
+
+}
+
+.space-content p {
+
+  max-width: 370px;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  margin-bottom: 25px;
+
+}
+
+.concept-note {
+
+  font-size: 12px !important;
+
+  opacity: .75;
+
+}
+
+/* THE BREW JOURNAL */
+
+.journal-grid {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 28px;
+
+}
+
+.journal-card img {
+
+  width: 100%;
+
+  height: 430px;
+
+  object-fit: cover;
+
+  margin-bottom: 25px;
+
+}
+
+.journal-card h3 {
+
+  font-family: var(--font-heading);
+
+  font-size: 42px;
+
+  font-weight: 500;
+
+  margin: 15px 0 20px;
+
+}
+
+/* THE LITTLE LETTER */
+
+.newsletter-section {
+
+  padding: var(--space-lg) 24px;
+
+  background: var(--espresso);
+
+  color: var(--oat);
+
+  text-align: center;
+
+}
+
+.newsletter-inner {
+
+  max-width: 740px;
+
+  margin: auto;
+
+}
+
+.newsletter-inner h2 {
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(60px, 7vw, 100px);
+
+  font-weight: 500;
+
+  line-height: .95;
+
+  margin: 25px 0;
+
+}
+
+.newsletter-inner > p {
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+}
+
+.newsletter-disclaimer {
+
+  max-width: 480px;
+
+  margin: 25px auto;
+
+  font-size: 12px !important;
+
+  opacity: .8;
+
+}
+
+.newsletter-form {
+
+  margin-top: 35px;
+
+  text-align: left;
+
+}
+
+.newsletter-form label {
+
+  display: block;
+
+  font-size: 12px;
+
+  margin-bottom: 12px;
+
+}
+
+.newsletter-field {
+
+  display: flex;
+
+  gap: 10px;
+
+}
+
+.newsletter-field input {
+
+  min-width: 0;
+
+  flex: 1;
+
+  padding: 16px;
+
+  border: 1px solid rgba(242, 232, 216, .5);
+
+  border-radius: 3px;
+
+  background: transparent;
+
+  color: var(--oat);
+
+  font: inherit;
+
+}
+
+.newsletter-field input::placeholder {
+
+  color: rgba(242, 232, 216, .7);
+
+}
+
+.newsletter-field button {
+
+  min-height: 48px;
+
+  padding: 15px 24px;
+
+  border: none;
+
+  background: var(--oat);
+
+  color: var(--espresso);
+
+  font: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+}
+
+#newsletter-feedback {
+
+  min-height: 24px;
+
+  font-size: 12px;
+
+}
+
+/* MOBILE LAYOUT */
+
+@media (max-width: 767px) {
+
+  .brunch-gallery {
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+  }
+
+  .brunch-gallery img {
+
+    height: 250px;
+
+  }
+
+  .brunch-gallery img:first-child {
+
+    grid-column: 1 / -1;
+
+    height: 340px;
+
+  }
+
+  .brunch-gallery img:nth-child(2),
+
+  .brunch-gallery img:nth-child(3) {
+
+    margin-top: 0;
+
+    height: 220px;
+
+  }
+
+  .space-layout,
+
+  .journal-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .space-image img {
+
+    height: 390px;
+
+  }
+
+  .journal-card img {
+
+    height: 320px;
+
+  }
+
+  .newsletter-section {
+
+    padding: var(--space-lg) 24px;
+
+  }
+
+  .newsletter-field {
+
+    flex-direction: column;
+
+  }
+
+  .newsletter-field button {
+
+    width: 100%;
+
+  }
+
+}
+
+/* ==========================================
+
+   COFICITO — SHOP PAGE
+
+========================================== */
+
+.shop-hero {
+
+  padding: var(--space-lg) 5%;
+
+  text-align: center;
+
+  background: var(--oat);
+
+}
+
+.shop-hero h1,
+
+.shop-closing h2 {
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(65px, 8vw, 120px);
+
+  font-weight: 500;
+
+  line-height: .9;
+
+  letter-spacing: -.045em;
+
+  margin: 28px auto;
+
+}
+
+.shop-hero h1 em,
+
+.shop-closing h2 em {
+
+  font-weight: 400;
+
+}
+
+.shop-hero p {
+
+  font-size: 15px;
+
+  color: #765C48;
+
+}
+
+.shop-chapter {
+
+  padding-top: var(--space-lg);
+
+  padding-bottom: var(--space-lg);
+
+}
+
+.chapter-description {
+
+  max-width: 270px;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #765C48;
+
+}
+
+.product-oat {
+
+  background: #E7D9C5;
+
+}
+
+.essential-symbol {
+
+  font-family: var(--font-heading);
+
+  font-size: 140px;
+
+  font-weight: 400;
+
+  color: var(--espresso);
+
+}
+
+.merch-placeholder {
+
+  color: var(--espresso);
+
+}
+
+.merch-grid {
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+}
+
+.shop-closing {
+
+  padding: 120px 24px;
+
+  text-align: center;
+
+  background: #E9D9C4;
+
+}
+
+.shop-closing p {
+
+  max-width: 500px;
+
+  margin: 0 auto 30px;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+}
+
+@media (max-width: 767px) {
+
+  .shop-hero {
+
+    padding: var(--space-lg) 24px;
+
+  }
+
+  .shop-hero h1 {
+
+    font-size: clamp(54px, 12vw, 76px);
+
+  }
+
+  .shop-chapter {
+
+    padding-top: var(--space-lg);
+
+    padding-bottom: var(--space-lg);
+
+  }
+
+.shop-chapter .product-card {
+
+    min-width: 0;
+
+  }
+
+  .shop-closing {
+
+    padding: 90px 24px;
+
+  }
+
+}
+
+/* ==========================================
+
+   COFICITO — QUICK VIEW & CART
+
+========================================== */
+
+[hidden] {
+
+  display: none !important;
+
+}
+
+.overlay-open {
+
+  overflow: hidden;
+
+}
+
+.quick-view-button {
+
+  display: inline-flex;
+
+  margin-top: 16px;
+
+  padding: 10px 0;
+
+  border: none;
+
+  border-bottom: 1px solid #432C24;
+
+  background: transparent;
+
+  color: #432C24;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: opacity 0.2s ease;
+
+}
+
+.quick-view-button:hover {
+
+  opacity: 0.6;
+
+}
+
+.modal-backdrop,
+
+.cart-backdrop {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  background: rgba(24, 17, 13, .62);
+
+}
+
+.modal-backdrop {
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 24px;
+
+}
+
+.quick-view-modal {
+
+  position: relative;
+
+  width: min(900px, 100%);
+
+  max-height: 90dvh;
+
+  overflow-y: auto;
+
+  background: var(--oat);
+
+  color: var(--espresso);
+
+  outline: none;
+
+}
+
+.quick-view-layout {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.quick-view-image {
+
+  min-height: 520px;
+
+  display: grid;
+
+  place-items: center;
+
+}
+
+.quick-view-image span {
+
+  font-family: var(--font-brand);
+
+  font-size: 100px;
+
+  font-weight: 700;
+
+  letter-spacing: -.08em;
+
+}
+
+.quick-view-content {
+
+  padding: 75px 45px 45px;
+
+}
+
+.quick-view-content h2 {
+
+  font-family: var(--font-heading);
+
+  font-size: 54px;
+
+  font-weight: 500;
+
+  line-height: .95;
+
+  margin: 20px 0;
+
+}
+
+.quick-view-content > p {
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+}
+
+.quick-view-price {
+
+  font-size: 24px !important;
+
+  font-weight: 700;
+
+}
+
+.quick-view-content form {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  margin-top: 30px;
+
+}
+
+.quick-view-content label {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+}
+
+.quick-view-content select,
+
+.quick-view-content input {
+
+  width: 100%;
+
+  min-height: 45px;
+
+  padding: 10px;
+
+  border: 1px solid #CDBEAA;
+
+  border-radius: 3px;
+
+  background: #FFF9F0;
+
+  color: var(--espresso);
+
+  font: inherit;
+
+}
+
+.quick-view-content #coffee-options {
+
+  display: grid;
+
+  gap: 8px;
+
+}
+
+.quick-view-content .button {
+
+  margin-top: 15px;
+
+  border: 0;
+
+  cursor: pointer;
+
+}
+
+.modal-close {
+
+  position: absolute;
+
+  top: 16px;
+
+  right: 18px;
+
+  z-index: 2;
+
+  width: 42px;
+
+  height: 42px;
+
+  border: 0;
+
+  background: var(--oat);
+
+  color: var(--espresso);
+
+  font-size: 30px;
+
+  cursor: pointer;
+
+}
+
+.cart-backdrop {
+
+  display: flex;
+
+  justify-content: flex-end;
+
+}
+
+.cart-drawer {
+
+  width: min(460px, 100%);
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 30px;
+
+  background: var(--oat);
+
+  color: var(--espresso);
+
+  outline: none;
+
+}
+
+.cart-header,
+
+.cart-footer p {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+}
+
+.cart-header {
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #D8CBBB;
+
+}
+
+.cart-header h2 {
+
+  font-family: var(--font-heading);
+
+  font-size: 40px;
+
+  margin: 0;
+
+}
+
+.cart-header button {
+
+  border: 0;
+
+  background: transparent;
+
+  font-size: 30px;
+
+  cursor: pointer;
+
+}
+
+#cart-items {
+
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 20px 0;
+
+}
+
+.cart-item {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid #D8CBBB;
+
+}
+
+.cart-item h3 {
+
+  font-family: var(--font-heading);
+
+  font-size: 25px;
+
+  margin: 0 0 8px;
+
+}
+
+.cart-item p {
+
+  font-size: 12px;
+
+  color: #765C48;
+
+}
+
+.cart-item strong {
+
+  font-size: 13px;
+
+}
+
+.cart-remove {
+
+  align-self: flex-start;
+
+  padding: 8px 0;
+
+  border: 0;
+
+  background: transparent;
+
+  text-decoration: underline;
+
+  cursor: pointer;
+
+}
+
+.cart-footer {
+
+  border-top: 1px solid #D8CBBB;
+
+  padding-top: 20px;
+
+}
+
+.cart-footer .concept-note {
+
+  display: block;
+
+  font-size: 11px !important;
+
+}
+
+.cart-empty {
+
+  padding: 60px 10px;
+
+  text-align: center;
+
+}
+
+.cart-empty h3 {
+
+  font-family: var(--font-heading);
+
+  font-size: 32px;
+
+  font-weight: 500;
+
+}
+
+.cart-count {
+
+  position: absolute;
+
+  top: -5px;
+
+  right: -5px;
+
+  min-width: 18px;
+
+  height: 18px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: var(--caramel);
+
+  color: var(--espresso);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+}
+
+.cart-toggle {
+
+  position: relative;
+
+}
+
+.cart-toast {
+
+  position: fixed;
+
+  left: 50%;
+
+  bottom: 30px;
+
+  z-index: 2000;
+
+  padding: 13px 20px;
+
+  background: var(--espresso);
+
+  color: var(--oat);
+
+  font-size: 12px;
+
+  border-radius: 30px;
+
+  transform: translate(-50%, 25px);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: opacity .25s ease, transform .25s ease;
+
+}
+
+.cart-toast.visible {
+
+  transform: translate(-50%, 0);
+
+  opacity: 1;
+
+}
+
+@media (max-width: 767px) {
+
+  .modal-backdrop {
+
+    padding: 0;
+
+  }
+
+  .quick-view-modal {
+
+    width: 100%;
+
+    height: 100dvh;
+
+    max-height: 100dvh;
+
+  }
+
+  .quick-view-layout {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .quick-view-image {
+
+    min-height: 280px;
+
+  }
+
+  .quick-view-content {
+
+    padding: 30px 24px 50px;
+
+  }
+
+  .quick-view-content h2 {
+
+    font-size: 45px;
+
+  }
+
+  .cart-drawer {
+
+    width: 100%;
+
+    padding: 24px;
+
+  }
+
+}
+
+/* ==========================================
+
+   COFICITO — PRODUCT INTERACTION POLISH
+
+========================================== */
+
+.product-card {
+
+  position: relative;
+
+}
+
+.product-card .product-image {
+
+  overflow: hidden;
+
+  transition: transform .35s ease;
+
+}
+
+.product-card:hover .product-image {
+
+  transform: translateY(-4px);
+
+}
+
+.quick-view-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 14px;
+
+  margin-top: 18px;
+
+  padding: 12px 0;
+
+  min-height: 44px;
+
+  border: 0;
+
+  border-bottom: 1px solid #432C24;
+
+  background: transparent;
+
+  color: #432C24;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: .03em;
+
+  cursor: pointer;
+
+  transition: opacity .2s ease;
+
+}
+
+.quick-view-button:hover {
+
+  opacity: .65;
+
+}
+
+.quick-view-button:focus-visible,
+
+.cart-toggle:focus-visible,
+
+.modal-close:focus-visible,
+
+.cart-remove:focus-visible {
+
+  outline: 2px solid #432C24;
+
+  outline-offset: 4px;
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .product-card .product-image,
+
+  .quick-view-button {
+
+    transition: none;
+
+  }
+
+}
+
+/* ==========================================
+
+   COFICITO — PREMIUM CART CONTROLS
+
+========================================== */
+
+.cart-quantity-controls {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0;
+
+  margin-top: 14px;
+
+  border: 1px solid rgba(67, 44, 36, 0.2);
+
+  border-radius: 100px;
+
+  overflow: hidden;
+
+  background: #F2E8D8;
+
+}
+
+.cart-qty-button {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 38px;
+
+  height: 38px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #432C24;
+
+  font-family: inherit;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+
+}
+
+.cart-qty-button:hover:not(:disabled) {
+
+  background: rgba(67, 44, 36, 0.1);
+
+}
+
+.cart-qty-button:disabled {
+
+  opacity: 0.35;
+
+  cursor: not-allowed;
+
+}
+
+.cart-quantity-value {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 30px;
+
+  padding: 0 5px;
+
+  color: #432C24;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  font-variant-numeric: tabular-nums;
+
+}
+
+.cart-remove {
+
+  border: 0;
+
+  background: transparent;
+
+  color: #8A6B5A;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  text-decoration: underline;
+
+  text-underline-offset: 4px;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+
+}
+
+.cart-remove:hover {
+
+  color: #432C24;
+
+}
+
+.cart-clear {
+
+  display: block;
+
+  width: 100%;
+
+  margin-top: 24px;
+
+  padding: 13px 18px;
+
+  border: 1px solid rgba(67, 44, 36, 0.25);
+
+  border-radius: 100px;
+
+  background: transparent;
+
+  color: #432C24;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.06em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+
+    background 0.2s ease,
+
+    color 0.2s ease;
+
+}
+
+.cart-clear:hover {
+
+  background: #432C24;
+
+  color: #F2E8D8;
+
+}
+
+.cart-qty-button:focus-visible,
+
+.cart-remove:focus-visible,
+
+.cart-clear:focus-visible {
+
+  outline: 2px solid #87916A;
+
+  outline-offset: 3px;
+
+}
+
+@media (max-width: 480px) {
+
+  .cart-qty-button {
+
+    width: 42px;
+
+    height: 42px;
+
+  }
+
+  .cart-quantity-value {
+
+    min-width: 34px;
+
+  }
+
+  .cart-clear {
+
+    padding: 15px 18px;
+
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cart-qty-button,
+
+  .cart-remove,
+
+  .cart-clear {
+
+    transition: none;
+
+  }
+
+}

@@ -1,0 +1,498 @@
+
+/* ========================================
+   COFICITO — VISIT US
+======================================== */
+
+:root {
+  --visit-espresso: #432C24;
+  --visit-oat: #F2E8D8;
+  --visit-sage: #87916A;
+  --visit-caramel: #D7A779;
+  --visit-soft: #E9DDCC;
+}
+
+.visit-eyebrow {
+  display: inline-block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.visit-shop-link {
+  color: var(--visit-espresso);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.visit-menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--visit-espresso);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.visit-mobile-nav[hidden] {
+  display: none !important;
+}
+
+.visit-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  background: var(--visit-oat);
+}
+
+.visit-mobile-nav a {
+  color: var(--visit-espresso);
+  text-decoration: none;
+}
+
+/* HERO */
+
+.visit-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: min(85svh, 850px);
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--visit-espresso);
+  color: #FFF9F0;
+}
+
+.visit-hero-image,
+.visit-hero-shade {
+  position: absolute;
+  inset: 0;
+}
+
+.visit-hero-image {
+  z-index: -2;
+}
+
+.visit-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visit-hero-shade {
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(25, 15, 11, .75),
+    rgba(25, 15, 11, .1)
+  );
+}
+
+.visit-hero-content {
+  width: 100%;
+  padding: 110px 6%;
+}
+
+.visit-hero h1 {
+  margin: 25px 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(70px, 10vw, 145px);
+  font-weight: 500;
+  line-height: .85;
+  letter-spacing: -.05em;
+}
+
+.visit-hero h1 em {
+  font-weight: 400;
+}
+
+.visit-hero-content p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* NOTICE */
+
+.visit-concept-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background: var(--visit-sage);
+  color: #FFF9F0;
+}
+
+.visit-concept-notice span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .15em;
+}
+
+.visit-concept-notice p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* WELCOME */
+
+.visit-welcome {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: end;
+  padding: 120px 6%;
+  background: var(--visit-oat);
+  color: var(--visit-espresso);
+}
+
+.visit-welcome h2 {
+  margin: 25px 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(65px, 8vw, 115px);
+  font-weight: 500;
+  line-height: .88;
+}
+
+.visit-welcome h2 em {
+  font-weight: 400;
+}
+
+.visit-welcome-description {
+  max-width: 400px;
+  margin-left: auto;
+}
+
+.visit-welcome-description p {
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+/* SPACE */
+
+.visit-space {
+  padding: 110px 6%;
+  background: var(--visit-soft);
+  color: var(--visit-espresso);
+}
+
+.visit-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 65px;
+}
+
+.visit-section-heading h2 {
+  margin: 25px 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(65px, 8vw, 115px);
+  font-weight: 500;
+  line-height: .86;
+}
+
+.visit-section-heading h2 em {
+  font-weight: 400;
+}
+
+.visit-section-heading > p {
+  max-width: 310px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.visit-gallery {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.visit-gallery figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.visit-gallery-main {
+  grid-row: span 2;
+}
+
+.visit-gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visit-gallery-main img {
+  aspect-ratio: 4 / 5;
+}
+
+.visit-gallery-small img {
+  aspect-ratio: 4 / 3;
+}
+
+.visit-gallery figcaption {
+  margin-top: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .13em;
+}
+
+/* RITUALS */
+
+.visit-rituals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 700px;
+  background: var(--visit-oat);
+  color: var(--visit-espresso);
+}
+
+.visit-rituals-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+  object-fit: cover;
+}
+
+.visit-rituals-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 90px 12%;
+}
+
+.visit-rituals-content h2 {
+  margin: 25px 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(60px, 6vw, 95px);
+  font-weight: 500;
+  line-height: .9;
+}
+
+.visit-rituals-content h2 em {
+  font-weight: 400;
+}
+
+.visit-rituals-content p {
+  max-width: 390px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ATMOSPHERE */
+
+.visit-atmosphere {
+  padding: 120px 6%;
+  background: var(--visit-sage);
+  color: var(--visit-espresso);
+}
+
+.visit-atmosphere h2 {
+  margin: 35px 0 90px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(70px, 10vw, 145px);
+  font-weight: 500;
+  line-height: .85;
+  letter-spacing: -.04em;
+}
+
+.visit-atmosphere h2 em {
+  font-weight: 400;
+}
+
+.visit-atmosphere-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.visit-atmosphere-details > div {
+  padding-top: 20px;
+  border-top: 1px solid rgba(67, 44, 36, .45);
+}
+
+.visit-atmosphere-details span {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 11px;
+}
+
+.visit-atmosphere-details strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.visit-atmosphere-details p {
+  max-width: 240px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* CLOSING */
+
+.visit-closing {
+  padding: 125px 6%;
+  background: var(--visit-espresso);
+  color: var(--visit-oat);
+  text-align: center;
+}
+
+.visit-closing h2 {
+  margin: 30px 0 40px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(65px, 9vw, 125px);
+  font-weight: 500;
+  line-height: .85;
+}
+
+.visit-closing-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.visit-closing-links a {
+  padding-bottom: 8px;
+  border-bottom: 1px solid currentColor;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.visit-closing > p {
+  max-width: 400px;
+  margin: 65px auto 0;
+  font-size: 11px;
+  line-height: 1.8;
+  opacity: .8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+  .visit-menu-toggle {
+    display: inline-block;
+  }
+
+  .visit-hero {
+    min-height: 78svh;
+  }
+
+  .visit-hero-content {
+    padding: 75px 24px;
+  }
+
+  .visit-hero h1 {
+    font-size: clamp(60px, 12vw, 85px);
+  }
+
+  .visit-concept-notice {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .visit-welcome {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 80px 24px;
+  }
+
+  .visit-welcome h2 {
+    font-size: 70px;
+  }
+
+  .visit-welcome-description {
+    margin-left: 0;
+  }
+
+  .visit-space {
+    padding: 80px 24px;
+  }
+
+  .visit-section-heading {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .visit-section-heading h2 {
+    font-size: 70px;
+  }
+
+  .visit-section-heading > p {
+    margin-top: 25px;
+  }
+
+  .visit-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px;
+  }
+
+  .visit-gallery-main {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .visit-gallery-main img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .visit-gallery-small img {
+    aspect-ratio: 3 / 4;
+  }
+
+  .visit-gallery figcaption {
+    font-size: 9px;
+  }
+
+  .visit-rituals {
+    grid-template-columns: 1fr;
+  }
+
+  .visit-rituals-image img {
+    min-height: 0;
+    height: 420px;
+  }
+
+  .visit-rituals-content {
+    padding: 80px 24px;
+  }
+
+  .visit-rituals-content h2 {
+    font-size: 65px;
+  }
+
+  .visit-atmosphere {
+    padding: 85px 24px;
+  }
+
+  .visit-atmosphere h2 {
+    margin-bottom: 60px;
+    font-size: 65px;
+  }
+
+  .visit-atmosphere-details {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .visit-closing {
+    padding: 90px 24px;
+  }
+
+  .visit-closing h2 {
+    font-size: 65px;
+  }
+}
